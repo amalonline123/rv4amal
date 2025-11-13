@@ -25,10 +25,16 @@
             run: npm run build # Or yarn build / pnpm build
 
           - name: SonarQube Scan
-            uses: SonarSource/sonarqube-scan-action@v4 # Ex: v4.1.0 or sha1, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
+            uses: SonarSource/sonarqube-scan-action@v6
             env:
-              organization: amalonline123
               SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+
+          # - name: SonarQube Scan
+          #   uses: SonarSource/sonarqube-scan-action@v4 # Ex: v4.1.0 or sha1, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
+          #   env:
+          #     organization: amalonline123
+          #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
           # - name: SonarCloud Scan
           #   uses: SonarSource/sonarcloud-github-action@v1
