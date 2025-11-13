@@ -24,12 +24,6 @@
           - name: Build project
             run: npm run build # Or yarn build / pnpm build
 
-          - name: SonarCloud Scan
-            uses: SonarSource/sonarcloud-github-action@v1
-            with:
-              organization: amalonline123
-              token: b5b5cd7e06f9f2e4e749932df701c5af6f941bbe
-
           - name: Deploy to GitHub Pages
             uses: peaceiris/actions-gh-pages@v3
             with:
