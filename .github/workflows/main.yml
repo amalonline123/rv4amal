@@ -29,3 +29,8 @@
             with:
               github_token: ${{ secrets.gh4r }}
               publish_dir: ./dist # Or your build output directory
+ 
+          - name: Display GitHub Pages URL
+            if: always()
+            run: |
+              echo "GitHub Pages URL: https://${{ github.repository_owner }}.github.io/rv4amal"
